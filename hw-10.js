@@ -58,14 +58,14 @@ console.log(filteredNumbers);
 
 // Задание 7
 
-// const number2 = [9, 8, 7, 6, 5];
-// const userNamber = +prompt('Введите число');
+const number2 = [9, 8, 7, 6, 5];
+const userNamber = +prompt('Введите число');
 
-// if (number2.includes(userNamber)){
-//     alert('Угадал!')
-// } else{
-//     alert('Неугадал!');
-// }
+if (number2.includes(userNamber)){
+    alert('Угадал!')
+} else{
+    alert('Неугадал!');
+}
 
 // Задание 8
 
