@@ -1,0 +1,142 @@
+@media (max-width: 767px){
+    .center{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .top{
+        background-image: url(./images/star_mobile.png), url(./images/Star2.png), url(./images/Star3.png), url(./images/Star5.png), url(./images/Star4.png);
+        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+        background-position: top right, 37px 97px, 91px 64px, 272px 557px, 295px 580px;
+        
+        &__welcome{
+            padding-top: 147px;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
+        &__welcome-text{
+            font-size: 40px;
+            text-align: center;
+        }
+
+        &__go{
+            font-size: 16px;
+            line-height:100%;
+            text-align: center;
+
+            &_text{
+                font-size: 16px;
+                line-height:100%;
+            }
+        }
+
+        &__btn{
+            font-size: 16px;
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+
+    .animation{
+        height: 51px;
+        
+
+        &__run{
+            gap: 27px;
+        }
+
+        &__img{
+            width: 19px;
+            height: 19px;
+        }
+
+        &__text{
+            font-size: 16px;
+            line-height: 110%;
+        }
+    }
+
+    .about{
+        display: none;
+    }
+
+    .game-box{
+        background-image: none;
+        padding-bottom: 17px;
+        
+        &__text-box{
+            padding-top: 48px;
+            margin-bottom: 48px;   
+        }
+        
+        &__text{
+            height: 49px;
+            font-size: 40px;
+            margin-left: 16px;
+        }
+    }
+
+    .game{
+        height: 100%;
+        gap: 24px;
+        
+        &__right{
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        &__left{
+            display: flex;
+            flex-direction: column-reverse;
+            
+        }
+
+        &__text-box{
+        
+            &_left{
+                padding-top: 0px;
+                padding-left: 29px;
+                padding-right: 29px;
+                padding-bottom: 33px;
+            }
+            
+            
+            &_right{
+                padding-top: 0px;
+                padding-left: 29px;
+                padding-right: 29px; 
+                padding-bottom: 33px;
+            }
+        }
+        
+        &__name{
+            font-size: 32px;
+        }
+
+        &__about{
+            font-size: 16px;
+            line-height: 100%;
+        }
+
+        &__play{
+            width: 100%;
+            font-size: 16px;
+        }
+
+        &__img{
+            width: 100%;
+        }
+    }
+
+    .footer{
+        height: 100px;
+        
+        &__text{
+            font-weight: 600;
+            font-size: 16px;
+        }
+    
+    }
+}
