@@ -51,10 +51,11 @@ console.log(number1);
 // Задание 6
 
 const numbers = [9, 8, 7, 'a', 6, 5];
-numbers.sort();
-console.log(numbers);
 const filteredNumbers = numbers.filter(numbers => numbers !== 'a');
 console.log(filteredNumbers);
+filteredNumbers.sort();
+console.log(filteredNumbers);
+
 
 // Задание 7
 
@@ -70,21 +71,13 @@ if (number2.includes(userNamber)){
 // Задание 8
 
 let text = 'abcdef';
-let splitText = text.split('');
-splitText.reverse();
-let joinedText = splitText.join(" ");
-console.log(joinedText);
+let textChange = text.split('').reverse().join(" ");
+console.log(textChange);
 
 // Задание 9
 
 const number3 = [[1, 2, 3],[4, 5, 6]];
-const newNumber3 = [];
-
-for (let i = 0; i < number3.length; i++) {
-    newNumber3.push(...number3[i]);
-}
-
-console.log(newNumber3);
+console.log(number3.flat());
 
 // Задание 10
 

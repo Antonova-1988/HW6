@@ -4,17 +4,17 @@ function guessGame() {
     const guessNumber = Math.floor(Math.random() * 100) + 1;
     
     while(true) {
-        const userNumber = Number(prompt('Угадай число от 1 до 100'));
+        const userNumber = +(prompt('Угадай число от 1 до 100'));
 
         if (userNumber === null) {
-            alert ('Неверно!');
+            alert('Игра завершена!');
             return;
-        } 
-        
-        if (userNumber === guessNumber){
-            alert ('Верно! Молодец!');
+        }
+
+       if (userNumber === guessNumber){
+            alert (`Верно! Загаданное число ${guessNumber}! Молодец!`);
             break;
-        } else if (userNumber < guessNumber){
+        } else if (Number(userNumber) < guessNumber){
             alert ('Неверно! Число должно быть больше.');
         } else{
             alert ('Неверно! Число должно быть меньше.');
@@ -28,18 +28,19 @@ function guessGame() {
 function arithmeticGame() {
     const operators = ["+", "-", "*", "/"];
     const operator = operators[Math.floor(Math.random() * operators.length)];
-    let result = " ";  
+    let result; 
+    let userAnswer; 
     
     let a = Math.floor(Math.random() * 10) + 1;
     let b = Math.floor(Math.random() * 10) + 1;
 
     switch (operator) {
         case '+':
-            userAnswer = +prompt(`Найдите сумму ${a} и ${b}`);
+            userAnswer = prompt(`Найдите сумму ${a} и ${b}`);
             result = a + b;
             break;
         case '-':
-            userAnswer = +prompt(`Надите разность ${a} и ${b}`);
+            userAnswer = prompt(`Надите разность ${a} и ${b}`);
             if (a > b) {
                 result = a - b;
             } else {
@@ -47,11 +48,11 @@ function arithmeticGame() {
             }
             break;
         case '*':
-            userAnswer = +prompt(`Найдите произведение ${a} и ${b}`);
+            userAnswer = prompt(`Найдите произведение ${a} и ${b}`);
             result = a * b;
             break;
         case '/':
-            userAnswer = +prompt(`Найдите частное ${a} и ${b}`);
+            userAnswer = prompt(`Найдите частное ${a} и ${b}`);
             if (a > b) {
                 result = a / b;
             } else {
@@ -59,17 +60,18 @@ function arithmeticGame() {
             }
             break;
     }
-        
 
-        
-    
-    
-        if (Number(userAnswer) === result) {
-            alert('Ответ верный!');
-        }
-        else {
-            alert('Ответ неверный!');
-        }
+    if (userAnswer === null) {
+        alert('Игра завершена!');
+        return;
+    }
+
+    if (Number(userAnswer) === result) {
+        alert('Ответ верный!');
+    }else {
+        alert('Ответ неверный!');
+    }   
 }
+
 
 
