@@ -115,3 +115,51 @@ function simpleQuiz() {
     alert(`Количество правильных ответов: ${num}.`)
 }
 
+// Камень, ножницы, бумага
+
+function RockScissorsPaper() {
+
+    const options = ["камень", "ножницы", "бумага"];
+    const randomIndex = Math.floor(Math.random() * options.length);
+    const computerPlay = options[randomIndex];
+    
+    const playerAnswer =  (prompt ('Выбирете и введите одно из значений: "Камень","Ножницы" или "Бумага"')). toLowerCase();
+    
+        if (playerAnswer === 'камень' || playerAnswer === 'ножницы' || playerAnswer === 'бумага') {
+            switch (computerPlay) {
+                case 'камень':
+                    if (playerAnswer === 'ножницы') {
+                        alert('Вы проиграли'); // Камень бьет ножницы
+                    } else if (playerAnswer === 'бумага') {
+                        alert('Вы выиграли'); // Бумага бьет камень
+                    } else {
+                        alert('Ничья');
+                    }
+                    break;
+                case 'ножницы':
+                    if (playerAnswer === 'бумага') {
+                        alert('Вы проиграли'); // Ножницы бьют бумагу
+                    } else if (playerAnswer === 'камень') {
+                        alert('Вы выиграли'); // Камень бьет ножницы
+                    } else {
+                        alert('Ничья');
+                    }
+                    break;
+                case 'бумага':
+                    if (playerAnswer === 'камень') {
+                        alert('Вы проиграли'); // Бумага бьет камень
+                    } else if (playerAnswer === 'ножницы') {
+                        alert('Вы выиграли'); // Ножницы бьют бумагу
+                    } else {
+                        alert('Ничья');
+                    }
+                    break;
+                
+            }
+            alert(`Компьютер выбрал: ${computerPlay}`);
+        } else {
+        alert('Вы ввели неверное значение');
+        }
+}   
+
+    
