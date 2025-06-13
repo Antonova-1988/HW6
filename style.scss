@@ -1,0 +1,323 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
+  .center{
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+.top{
+    padding-bottom: 156px;
+    background-color:rgba(225, 255, 143, 1);
+    background-image: url(./images/big_star.png), url(./images/Star2.png), url(./images/Star3.png), url(./images/Star5.png), url(./images/Star4.png);
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: top right, 63px 94px, 156px 69px, 948px 548px, 1013px 568px;
+
+    &__welcome{
+        padding-top: 196px;
+        max-width: 769px;
+    }
+    
+    &__welcome-text{
+        font-weight:700;
+        font-size:64px;
+        line-height:100%;
+        color: rgba(32, 32, 39, 1);
+        padding-bottom: 24px;
+        
+    }
+    &__go{
+        font-weight:400;
+        font-size:24px;
+        line-height:32px;
+        padding-bottom: 48px;
+
+        &_text{
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 32px;
+        }
+           
+    }
+
+    &__btn{
+        display: block;
+        max-width: 285px;
+        border: 1px solid rgba(32, 32, 39, 1);
+        border-radius: 60px;
+        background-color: rgba(32, 32, 39, 1);
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 142%;
+        color: rgba(255, 255, 255, 1);
+        padding: 16px 65px;
+        text-decoration: none;
+        
+        &:hover{
+            background-color: #fff;
+            color: rgba(0, 0, 0, 1);
+        }
+    }
+}
+
+.animation{
+    height: 90px;
+    background-color: rgba(188, 236, 48, 1);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    
+    &__run{
+        white-space: nowrap; 
+        display: flex;
+        align-items: center;
+        gap: 51px;
+        animation: scroll 15s linear infinite;
+
+        @keyframes scroll {
+            from { transform: translateX(100%); }
+            to { transform: translateX(-100%); }
+        }
+    }
+    
+    &__text{
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 110%;
+        color: rgba(32, 32, 39, 1);
+        display: inline-block;
+        white-space: nowrap;   
+    }
+}
+
+
+.about{
+    background-color:rgba(32, 32, 39, 1);
+    padding-bottom: 96px;
+    background-image: url(./images/star6.png), url(./images/star8.png), url(./images/star7.png);
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-position: right 77px, 25px 770px, 40px 822px;
+    
+    &__text{
+        font-weight:700;
+        font-size:64px;
+        line-height:100%;
+        color: rgba(255, 255, 255, 1);
+        margin-bottom: 24px;
+        padding-top:94px;
+    }
+
+    &__colection{
+        width: 788px;
+        height: 96px;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        color: rgba(255,255,255,1);
+        margin-bottom: 72px;
+    }
+}
+
+.about-box{
+    display: grid;
+    gap: 32px;
+    grid-template-rows: auto;
+
+    &__1{
+        display: grid;
+        gap: 32px;
+        grid-template-columns: repeat(12, 1fr);
+        align-items: start;
+    }
+
+    &__2{
+        display: grid;
+        gap: 32px;
+        grid-template-columns: repeat(12, 1fr);
+        align-items: end;
+    }
+    
+    &__link{
+        text-decoration: none;
+        color: rgba(32, 32, 39, 1);
+        grid-column: span 4;
+        }
+    
+}
+
+.about-box-card{
+    width: 378px;
+    border-radius: 30px;
+    background-color: #fff;
+    
+
+    &:hover{
+        cursor:pointer;
+        transform:scale(1.05);
+        transition: 1s;
+    }
+
+
+    &__size1{
+        height: 473px;
+    }
+
+    &__size2{
+        height: 512px;
+    }
+
+    &__size3{
+        height: 551px;
+    }
+
+    &__img{
+        border-radius: 30px;
+        width: 100%;
+    }
+
+    &__text{
+        background-color: #fff;
+        padding-top: 40px;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-bottom: 36px;
+        border-radius: 30px;
+    }
+    &__number{
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 110%;
+        color: #202027;
+        margin-bottom: 26px;
+        background-color: rgba(247, 247, 247, 1);
+        border-radius: 53px;
+        width: 111px;
+        padding:8px 16px 10px 16px;
+        display: block;
+
+    }
+
+    &__name{
+        width: 314px;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 100%;
+    }
+}
+
+.game-box{
+    background-color: rgba(32, 32, 39, 1);
+    padding-bottom: 144px;
+    background-image: url(./images/star8.png),url(./images/star7.png), url(./images/star7-1.png), url(./images/star8-1.png);
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: 90% 93px, 95% 126px, right 52px bottom 65px, right 150px bottom 45px;
+    
+    &__text-box{
+        margin-bottom: 72px;
+    }
+
+    &__text{
+        height: 78px;
+        font-weight: 700;
+        font-size: 64px;
+        line-height: 100%;
+        color: rgb(255,255,255,1);
+        
+    }
+}
+
+.game{ 
+    height: 500px; 
+    background-color:rgb(255,255,255,1);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 48px;
+    margin-bottom: 32px;
+
+
+    &__text-box{
+        max-width: 500px;
+
+        &_left{
+            padding-top: 48px;
+            padding-left: 48px;
+        }
+        
+        
+        &_right{
+            padding-top: 48px;
+            padding-right: 48px; 
+        }
+    }
+    
+    
+    &__name{
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 100%;
+        color: rgba(32,32,39,1);
+        padding-bottom: 24px;
+    }
+
+    &__about{
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+        color:rgba(32,32,39,1);
+        padding-bottom: 36px;
+    }
+
+    &__play{
+        border: 1px solid rgba(32, 32, 39, 1);
+        border-radius: 60px;
+        background-color: rgba(32, 32, 39, 1);
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 142%;
+        color: rgba(255, 255, 255, 1);
+        padding: 16px 75px;
+
+        &:hover{
+            background-color: #fff;
+            color: rgba(0, 0, 0, 1);
+
+        }
+    }
+
+    &__img{
+        border-radius: 30px;
+        height: 100%;
+    }
+}
+
+.footer{
+    background: rgba(189, 237, 53, 1);
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__text{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 100%;
+    }
+
+}
+
+@import 'mobile';
