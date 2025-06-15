@@ -1,0 +1,99 @@
+@media(max-width: 1024px){
+    .center{
+        padding-left: calc(50% - 393px);
+        padding-right: calc(50% - 393px);
+    }
+    
+    .top{
+        background-image: url(./images/star_mobile.png), url(./images/Star2.png), url(./images/Star3.png), url(./images/Star5.png), url(./images/Star4.png);
+        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+        background-position: top right, 37px 97px, 91px 64px, 530px 520px, 580px 550px;
+        
+        &__welcome-text{
+            text-align: center; 
+            font-size: 48px;
+        } 
+        
+        &__go{
+            text-align: center; 
+        }
+
+        &__btn{
+            max-width: 100%;
+            text-align: center;
+        }
+    }
+
+    .about{
+        background-image: url(./images/star6.png);
+        
+        background-position: right 250px;
+        background-size: 150px;
+
+        &__text{
+            text-align: center;
+        }
+
+        &__colection{
+            text-align: center;
+        }
+    }
+
+    .about-box{
+        display: grid;
+        gap: 24px;
+        justify-items: stretch;
+        justify-content: center;
+    }
+
+    .about-box-card{
+        width: 250px;
+
+        &__size1{
+            height: 400px;
+        }
+    
+        &__size2{
+            height: 439px;
+        }
+    
+        &__size3{
+            height: 478px;
+        }
+
+        &__name{
+            width: 200px;
+            font-weight: 700;
+            font-size: 28px;
+        }
+    }
+
+    .game-box{
+        background-image: url(./images/star8.png), url(./images/star7.png), url(./images/star7-1.png), url(./images/star8-1.png);
+        background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+        background-position: 85% 75px, 95% 93px, right 52px bottom 65px, right 150px bottom 45px;
+        
+        &__text{
+            text-align: center; 
+        }
+    }
+
+    .game{
+        height: 100%;
+        gap: 24px;
+        
+        &__name{
+            font-size: 32px;
+        }
+
+        &__about{
+            font-size: 16px;
+            line-height: 100%;
+        }
+
+        &__play{
+            width: 100%;
+            font-size: 16px;
+        }
+    }
+}
