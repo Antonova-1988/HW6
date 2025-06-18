@@ -4,11 +4,18 @@ function guessGame() {
     const guessNumber = Math.floor(Math.random() * 100) + 1;
     
     while(true) {
-        const userNumber = +(prompt('Угадай число от 1 до 100'));
+        const userInput = (prompt('Угадай число от 1 до 100'));
 
-        if (userNumber === null) {
+        if (userInput === null) {
             alert('Игра завершена!');
             return;
+        }
+
+        const userNumber = Number(userInput);
+
+        if (isNaN(userNumber)) {
+            alert('Пожалуйста, введите число.');
+            continue;
         }
 
        if (userNumber === guessNumber){
@@ -79,6 +86,10 @@ function flipText() {
     let userText = prompt('Введите любой текст');
     let textChange = userText.split('').reverse().join(" ");
     alert(textChange);
+
+    if (userText === null) {
+        return;
+    }
 }
 
 // Викторина
@@ -105,6 +116,12 @@ function simpleQuiz() {
     let num = 0;
     for (let i = 0; i < quiz.length; i++) {
         let quizAnswer = Number(prompt(`Выбери правильный ответ \n${quiz[i].question} \n${quiz[i].options.join('\n')}`));
+        
+        if (quizAnswer === null || quizAnswer.trim() === "") {
+            alert('Выход из викторины.');
+            return;
+        }        
+        
         if (quizAnswer === quiz[i].correctAnswer) {
             num++;
             alert('Овет верный')

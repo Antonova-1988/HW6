@@ -80,18 +80,6 @@
     .game{
         height: 100%;
         gap: 24px;
-        
-        &__right{
-            display: flex;
-            flex-direction: column;
-            
-        }
-
-        &__left{
-            display: flex;
-            flex-direction: column-reverse;
-            
-        }
 
         &__text-box{
         
@@ -128,6 +116,18 @@
         &__img{
             width: 100%;
         }
+    }
+
+    .game-right{
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .game-left{
+        display: flex;
+        flex-direction: column-reverse;
+        
     }
 
     .footer{

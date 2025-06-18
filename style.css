@@ -155,15 +155,6 @@ body {
   transform: scale(1.05);
   transition: 1s;
 }
-.about-box-card__size1 {
-  height: 473px;
-}
-.about-box-card__size2 {
-  height: 512px;
-}
-.about-box-card__size3 {
-  height: 551px;
-}
 .about-box-card__img {
   border-radius: 30px;
   width: 100%;
@@ -193,6 +184,18 @@ body {
   font-weight: 700;
   font-size: 32px;
   line-height: 100%;
+}
+
+.about-box-card-size1 {
+  height: 473px;
+}
+
+.about-box-card-size2 {
+  height: 512px;
+}
+
+.about-box-card-size3 {
+  height: 551px;
 }
 
 .game-box {
@@ -322,15 +325,6 @@ body {
   .about-box-card {
     width: 250px;
   }
-  .about-box-card__size1 {
-    height: 400px;
-  }
-  .about-box-card__size2 {
-    height: 439px;
-  }
-  .about-box-card__size3 {
-    height: 478px;
-  }
   .about-box-card__name {
     width: 200px;
     font-weight: 700;
@@ -343,6 +337,15 @@ body {
   }
   .game-box__text {
     text-align: center;
+  }
+  .about-box-card-size1 {
+    height: 400px;
+  }
+  .about-box-card-size2 {
+    height: 439px;
+  }
+  .about-box-card-size1 {
+    height: 478px;
   }
   .game {
     height: 100%;
@@ -427,14 +430,6 @@ body {
     height: 100%;
     gap: 24px;
   }
-  .game__right {
-    display: flex;
-    flex-direction: column;
-  }
-  .game__left {
-    display: flex;
-    flex-direction: column-reverse;
-  }
   .game__text-box_left {
     padding-top: 0px;
     padding-left: 29px;
@@ -460,6 +455,14 @@ body {
   }
   .game__img {
     width: 100%;
+  }
+  .game-right {
+    display: flex;
+    flex-direction: column;
+  }
+  .game-left {
+    display: flex;
+    flex-direction: column-reverse;
   }
   .footer {
     height: 100px;
