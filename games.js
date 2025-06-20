@@ -7,7 +7,7 @@ function guessGame() {
         const userInput = (prompt('Угадай число от 1 до 100'));
 
         if (userInput === null) {
-            alert('Игра завершена!');
+            alert ('Игра завершена!');
             return;
         }
 
@@ -18,12 +18,17 @@ function guessGame() {
             continue;
         }
 
+        if (userNumber < 1 || userNumber > 100) {
+            alert ('Число должно быть в диапазоне от 1 до 100.');
+            continue;
+        }
+
        if (userNumber === guessNumber){
             alert (`Верно! Загаданное число ${guessNumber}! Молодец!`);
             break;
-        } else if (Number(userNumber) < guessNumber){
+        } else if (userNumber < guessNumber){
             alert ('Неверно! Число должно быть больше.');
-        } else{
+        } else {
             alert ('Неверно! Число должно быть меньше.');
         }
             
@@ -69,14 +74,18 @@ function arithmeticGame() {
     }
 
     if (userAnswer === null) {
-        alert('Игра завершена!');
+        alert ('Игра завершена.');
+        return;
+    } 
+    if (userAnswer.trim() === ''){
+        alert ('Вы ничего не ввели.');
         return;
     }
 
     if (Number(userAnswer) === result) {
-        alert('Ответ верный!');
+        alert ('Ответ верный!');
     }else {
-        alert('Ответ неверный!');
+        alert ('Ответ неверный!');
     }   
 }
 
@@ -84,12 +93,18 @@ function arithmeticGame() {
 
 function flipText() {
     let userText = prompt('Введите любой текст');
-    let textChange = userText.split('').reverse().join(" ");
-    alert(textChange);
-
+    
     if (userText === null) {
+        alert ('Игра завершена.');
+        return;
+    } 
+    if (userText.trim() === ''){
+        alert ('Вы ничего не ввели.');
         return;
     }
+
+    let textChange = userText.split('').reverse().join(" ");
+    alert (textChange);
 }
 
 // Викторина
@@ -115,12 +130,24 @@ function simpleQuiz() {
 
     let num = 0;
     for (let i = 0; i < quiz.length; i++) {
-        let quizAnswer = Number(prompt(`Выбери правильный ответ \n${quiz[i].question} \n${quiz[i].options.join('\n')}`));
-        
-        if (quizAnswer === null || quizAnswer.trim() === "") {
-            alert('Выход из викторины.');
+        let input = prompt(`Выбери правильный ответ: \n${quiz[i].question} \n${quiz[i].options.join('\n')}`);
+         
+        if (input === null) {
+            alert('Игра завершена.');
             return;
-        }        
+        }
+
+        if (input.trim() === '') {
+            alert('Вы ничего не ввели.');
+            return;
+        }
+
+        let quizAnswer = Number(input);
+
+        if (isNaN(quizAnswer)) {
+            alert('Пожалуйста, введите числовой ответ.');
+            return;
+        }
         
         if (quizAnswer === quiz[i].correctAnswer) {
             num++;
@@ -140,46 +167,57 @@ function RockScissorsPaper() {
     const randomIndex = Math.floor(Math.random() * options.length);
     const computerPlay = options[randomIndex];
     
-    const playerAnswer =  (prompt ('Выбирете и введите одно из значений: "Камень","Ножницы" или "Бумага"')). toLowerCase();
+    const playerInput =  prompt ('Выбирете и введите одно из значений: "Камень","Ножницы" или "Бумага"');
     
+    if (playerInput === null) {
+        alert('Игра завершена.');
+        return;
+    }
+
+    if (playerInput.trim() === ''){
+        alert('Вы ничего не ввели.');
+        return;
+    }
+    const playerAnswer = playerInput.toLowerCase();
+
         if (playerAnswer === 'камень' || playerAnswer === 'ножницы' || playerAnswer === 'бумага') {
             switch (computerPlay) {
                 case 'камень':
                     if (playerAnswer === 'ножницы') {
-                        alert('Вы проиграли'); // Камень бьет ножницы
+                        alert(`Вы проиграли! Компьютер выбрал: ${computerPlay}`); // Камень бьет ножницы
                     } else if (playerAnswer === 'бумага') {
-                        alert('Вы выиграли'); // Бумага бьет камень
+                        alert(`Вы выиграли! Компьютер выбрал: ${computerPlay}`); // Бумага бьет камень
                     } else {
                         alert('Ничья');
                     }
                     break;
                 case 'ножницы':
                     if (playerAnswer === 'бумага') {
-                        alert('Вы проиграли'); // Ножницы бьют бумагу
+                        alert(`Вы проиграли! Компьютер выбрал: ${computerPlay}`); // Ножницы бьют бумагу
                     } else if (playerAnswer === 'камень') {
-                        alert('Вы выиграли'); // Камень бьет ножницы
+                        alert(`Вы выиграли! Компьютер выбрал: ${computerPlay}`); // Камень бьет ножницы
                     } else {
                         alert('Ничья');
                     }
                     break;
                 case 'бумага':
                     if (playerAnswer === 'камень') {
-                        alert('Вы проиграли'); // Бумага бьет камень
+                        alert(`Вы проиграли! Компьютер выбрал: ${computerPlay}`); // Бумага бьет камень
                     } else if (playerAnswer === 'ножницы') {
-                        alert('Вы выиграли'); // Ножницы бьют бумагу
+                        alert(`Вы выиграли! Компьютер выбрал: ${computerPlay}`); // Ножницы бьют бумагу
                     } else {
                         alert('Ничья');
                     }
                     break;
                 
             }
-            alert(`Компьютер выбрал: ${computerPlay}`);
-        } else {
-        alert('Вы ввели неверное значение');
-        }
+        } 
+
+        
 } 
 
 // Генератор случайных цветов
+
 function randomColorGenerator() {
     const changeColor = document.querySelector('.change-color');
     const gameBox = document.querySelector('.game-box');
